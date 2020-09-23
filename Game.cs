@@ -13,8 +13,13 @@ namespace HelloWorld
         public int itemPrice;
     }
 
+
+
     class Game
     {
+
+        private Player player;
+        private Shop shop;
 
         private Items _longSword;
         private Items _sheild;
@@ -79,23 +84,30 @@ namespace HelloWorld
         }
 
 
-        public void PrintInventory()
+        public void PrintInventory(Items[] inventory)
         {
-            foreach(Items item in _player.GetInventory())
+            for (int i = 0; i < inventory.Length; i++)
             {
-                //Console.WriteLine(_inventory);
+                Console.WriteLine();
             }
         }
-
 
         private void OpenShopMenu()
         {
 
         }
 
-        private shopInventory(Items[])
-        {
 
+        public Player CreationPlayer()
+         {
+            Player player = new Player();
+            return player;
+         }
+
+        public Shop CreationShop()
+        {
+            Shop shop = new Shop();
+            return shop;
         }
 
         //Run the game
@@ -115,6 +127,7 @@ namespace HelloWorld
         public void Update()
         {
             OpenShopMenu();
+            CreationShop();
         }
 
         //Performed once when the game ends
@@ -122,5 +135,6 @@ namespace HelloWorld
         {
             
         }
+
     }
 }

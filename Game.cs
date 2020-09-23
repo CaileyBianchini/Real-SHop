@@ -4,7 +4,8 @@ using System.Text;
 
 namespace HelloWorld
 {
-
+    //Cailey B
+    //I'm so sorry :(
 
     struct Items
     {
@@ -13,10 +14,103 @@ namespace HelloWorld
         public int itemPrice;
     }
 
-
+    
 
     class Game
     {
+        public void Continue()
+        {
+            Console.WriteLine("\nPress [Enter] to continue.");
+            Console.ReadKey();
+            Console.Clear();
+        }
+
+
+        // INPUTS
+
+        public void GetInput(out char input, string option1, string option2, string quiry)
+        {
+            Console.WriteLine(quiry);
+            Console.WriteLine("1. " + option1);
+            Console.WriteLine("2. " + option2);
+            input = ' ';
+
+            //loops till valid is received
+            while (input != '1' && input != '2')
+            {
+                input = Console.ReadKey().KeyChar;
+                if (input != '1' && input != '2')
+                {
+                    Console.WriteLine("Invalid Input. Please Try Again.");
+
+                }
+            }
+
+            Continue();
+        }
+        public void GetInput(out char input, string option1, string option2, string option3, string quiry)
+        {
+            Console.WriteLine(quiry);
+            Console.WriteLine("1. " + option1);
+            Console.WriteLine("2. " + option2);
+            Console.WriteLine("3. " + option3);
+            input = ' ';
+
+            //loops till valid is received
+            while (input != '1' && input != '2' && input != '3')
+            {
+                input = Console.ReadKey().KeyChar;
+                if (input != '1' && input != '2' && input != '3')
+                {
+                    Console.WriteLine("Invalid Input. Please Try Again.");
+
+                }
+            }
+
+            Continue();
+        }
+
+        public void GetInput(out char input, string option1, string option2, string option3, string option4, string quiry)
+        {
+            Console.WriteLine(quiry);
+            Console.WriteLine("1. " + option1);
+            Console.WriteLine("2. " + option2);
+            Console.WriteLine("3. " + option3);
+            Console.WriteLine("4. " + option4);
+            input = ' ';
+
+            //loops till valid is received
+            while (input != '1' && input != '2' && input != '3' && input != '4')
+            {
+                input = Console.ReadKey().KeyChar;
+                if (input != '1' && input != '2' && input != '3' && input != '4')
+                {
+                    Console.WriteLine("Invalid Input. Please Try Again.");
+
+                }
+            }
+
+            Continue();
+        }
+        public void GetInput(out char input, string quiry)
+        {
+            Console.WriteLine(quiry);
+            input = ' ';
+
+            //loops till valid is received
+            while (input != '1' && input != '2' && input != '3' && input != '4' && input != '5' && input != '6')
+            {
+                input = Console.ReadKey().KeyChar;
+                if (input != '1' && input != '2' && input != '3' && input != '4')
+                {
+                    Console.WriteLine("Invalid Input. Please Try Again.");
+
+                }
+            }
+
+            Continue();
+        }
+
 
         private Player player;
         private Shop shop;
@@ -36,6 +130,7 @@ namespace HelloWorld
         private Items _money;
 
         private Player _player;
+        private Items shopInventory;
 
         public void InitializeItems()
         {
@@ -94,7 +189,8 @@ namespace HelloWorld
 
         private void OpenShopMenu()
         {
-
+            Console.WriteLine("Welcome to the shop!");
+            PrintInventory();
         }
 
 

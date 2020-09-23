@@ -23,7 +23,7 @@ namespace HelloWorld
 
         public bool Sell(Player _player, int shopIndex, int playerIndex)
         {
-            return _player.Buy(Player.inventory[shopIndex], playerIndex); //don't know what to do to fix this and where this should go
+            return _player.Buy(Player._inventory[shopIndex], playerIndex); //don't know what to do to fix this and where this should go
         }
 
     }

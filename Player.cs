@@ -12,7 +12,9 @@ namespace HelloWorld
         private Items[] _inventory;
         private Items _currentWeapon;
         private Items _hands;
-        private int _gold;
+        private Items _gold;
+
+        
 
         public Player()
         {
@@ -21,7 +23,7 @@ namespace HelloWorld
             _inventory = new Items[3];
             _hands.itemBoost = 0;
             _hands.itemName = "Palm";
-            _gold = 10;
+            
         }
 
         public Player(/*string nameVal,*/int healthVal, int damageVal, int inventorySize)
@@ -50,7 +52,6 @@ namespace HelloWorld
             Items[] inventory = { };
             
         }
-
 
 
         //Unneeded

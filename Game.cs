@@ -21,6 +21,7 @@ namespace HelloWorld
         private Items _mace;
         private Items _BowAndArrow;
 
+        private Items _Gem;
         private Items _fireGem;
 
         private Items _poisonPotion;
@@ -54,6 +55,10 @@ namespace HelloWorld
             _money.itemPrice = 10;
 
             //Gem
+            _Gem.itemPrice = 2;
+            _Gem.itemName = "Gem";
+            _Gem.itemBoost = 15;
+
             _fireGem.itemPrice = 1;
             _fireGem.itemName = "Fire Gem";
             _fireGem.itemBoost = 10;
@@ -88,9 +93,9 @@ namespace HelloWorld
 
         }
 
-        public bool Sell(Player _player, int shopIndex, int playerIndex)
+        private shopInventory(Items[])
         {
-            return _player.Buy(Player._inventory[shopIndex], playerIndex);
+
         }
 
         //Run the game

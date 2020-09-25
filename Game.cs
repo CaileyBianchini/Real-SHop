@@ -183,14 +183,14 @@ namespace HelloWorld
         {
             for (int i = 0; i < inventory.Length; i++)
             {
-                Console.WriteLine();
+                Console.WriteLine((i + 1) + ". " + inventory[i].itemName + inventory[i].itemPrice);
             }
         }
 
         private void OpenShopMenu()
         {
             Console.WriteLine("Welcome to the shop!");
-            PrintInventory();
+            PrintInventory(shopInventory);
         }
 
 
